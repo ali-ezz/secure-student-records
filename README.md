@@ -6,9 +6,7 @@
 
 The **Secure Student Records Management System (SRMS)** is a  database application designed to manage academic data while enforcing five core database security models. The system ensures strict access control, data confidentiality, integrity, and auditability across multiple user roles.
 
----
-
-I’ll now assemble all the extracted information into a single, complete document about the **Secure Student Records Management System (SRMS)**. Below is the full documentation with structured sections, tables, and descriptions
+the **Secure Student Records Management System (SRMS)**. Below is the full documentation with structured sections, tables, and descriptions
 
 The Secure Student Records Management System (SRMS) is a database application that implements five security models for managing academic data. It is built with a Python/Tkinter front-end, a Python back-end using pymssql, and a SQL Server database.
 
