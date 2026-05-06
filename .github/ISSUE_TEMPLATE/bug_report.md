@@ -3,25 +3,24 @@ name: Bug report
 about: Create a report to help us improve the project
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+**Description**
+A clear and concise description of the bug.
 
-**To reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Run '...'
-3. See error
+**Steps to reproduce**
+1. 
+2. 
+3. 
 
 **Expected behavior**
-A clear description of what you expected to happen.
+What you expected to happen.
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+**Actual behavior**
+What happened instead.
 
 **Environment**
 - OS:
 - Python version:
-- Dependency versions:
+- Dependencies:
 
 **Additional context**
-Add any other context about the problem here.
+Any other information that may help resolve the issue.

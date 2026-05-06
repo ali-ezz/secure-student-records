@@ -1,46 +1,41 @@
-# Secure Student Records Management System (SRMS)
+# Secure Student Records
 
-Secure Student Records Management System (SRMS) is a security-first academic records application built for managing student, instructor, and course data with strict access control, encryption, audit logging, and multilevel data protection.
+A security-first academic records management system for Python and SQL Server, built with role-based access controls, encryption, audit logging, and multilevel data protection.
 
 ## Overview
 
-SRMS provides a desktop-grade Python GUI with a SQL Server backend and secure database policies. It is designed for environments where role-based access control, data confidentiality, and auditability are required.
+Secure Student Records provides a secure desktop-style interface for managing academic data across student, instructor, TA, and administrative roles. It is designed to demonstrate database security models, auditing, and confidentiality controls in an educational records environment.
 
-The project demonstrates:
+## Problem Solved
 
-- Role-based access control (RBAC)
-- Multilevel security (MLS) enforcement
-- Inference control for sensitive aggregates
-- Encrypted personal data storage
-- Audit logging and secure workflows
-- A Tkinter GUI for Admin, Instructor, TA, Student, and Guest users
+Academic record systems often expose sensitive student data to too many users and lack enforced access controls. This repository addresses that gap by combining database security models with application-layer controls to protect records, grades, and personal information.
 
 ## Features
 
-- Secure authentication and role-aware dashboards
-- Database security models: RBAC, MLS, inference control, flow control, and encryption
-- SQL Server schema, roles, views, stored procedures, and sample data
-- Data classification for student, instructor, course, grades, attendance, and audit records
-- Template files and documentation for repository professionalism
+- Role-based access control (RBAC) with distinct user dashboards
+- Multilevel security (MLS) enforcement for sensitive records
+- Inference control to prevent sensitive aggregate disclosure
+- Encrypted storage for personally identifiable information
+- Audit logging of user and database activity
+- SQL Server schema, roles, views, and stored procedures for secure access
+- Desktop GUI launcher for Admin, Instructor, TA, Student, and Guest users
 
 ## Tech Stack
 
-| Component | Technology |
-| --- | --- |
-| Application | Python 3 |
-| GUI | Tkinter, ttkbootstrap |
-| Database | Microsoft SQL Server |
-| Database Drivers | pymssql, pyodbc |
-| Encryption | cryptography, bcrypt |
-| Reporting | openpyxl, fpdf2 |
+- Python 3
+- Tkinter and ttkbootstrap for GUI
+- Microsoft SQL Server backend
+- `pyodbc` and `pymssql` for database connectivity
+- `cryptography` and `bcrypt` for encryption and hashing
+- `openpyxl` and `fpdf2` for reporting and exports
 
 ## Installation
 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/ali-ezz/Data-Security-Secure-Student-Records-Management-System-SRMS-.git
-cd Data-Security-Secure-Student-Records-Management-System-SRMS-
+git clone https://github.com/ali-ezz/secure-student-records.git
+cd secure-student-records
 ```
 
 2. Create and activate a virtual environment:
@@ -56,31 +51,31 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-4. Copy the example environment file:
+4. Copy the environment example:
 
 ```bash
 cp .env.example .env
 ```
 
-5. Configure SQL Server credentials in `.env` if needed.
+5. Configure SQL Server credentials in `.env` and verify access.
 
-6. Prepare the database schema and sample data using the SQL scripts in `sql/`.
+6. Initialize the database using the SQL scripts in `sql/`.
 
 ## Usage
 
-- Start the application launcher:
+Run the application launcher:
 
 ```bash
 python run.py
 ```
 
-- Or run the GUI directly:
+Or start the GUI directly:
 
 ```bash
 python src/gui/main.py
 ```
 
-- Use the bundled `run_all.sh` or `run_with_dbeaver.sh` for SQL and database workflow assistance.
+The `run_all.sh` and `run_with_dbeaver.sh` helpers can assist with SQL and database tasks.
 
 ## Environment Variables
 
@@ -98,33 +93,37 @@ Use `.env.example` as a template for local configuration.
 - `README.md` — project documentation
 - `requirements.txt` — Python dependency list
 - `.gitignore` — ignored files for git
-- `.env.example` — environment configuration example
+- `.env.example` — environment configuration template
 - `src/` — application source code
-- `database/` — local SQLite support and backup database files
-- `sql/` — SQL Server schema, security, procedures, and sample data
-- `tests/` — automated repository tests
+- `database/` — local database support and backup artifacts
+- `sql/` — SQL Server schema, roles, procedures, and sample data
+- `tests/` — automated tests
 - `.github/` — issue and pull request templates
-- `assets/screenshots/` — placeholder for screenshot assets
+- `assets/` — supporting images and diagrams
 
 ### Key source folders
 
-- `src/gui/` — GUI screens, dashboards, and components
+- `src/gui/` — user interface screens, dashboards, and components
 - `src/database/` — database connection and authentication logic
-- `src/security/` — security modules and enforcement logic
+- `src/security/` — security enforcement and controls
 - `src/utils/` — helper utilities and export tools
 
 ## Results
 
-This repository is structured to support a secure student record management system with clearly defined roles, sensitive data classification, and audit controls. It aims to demonstrate best practices for repository documentation and security architecture in an educational or proof-of-concept setting.
+This repository is intended to be a secure reference implementation for academic record security. It focuses on enforceable access control, data classification, encryption, and auditability rather than a production deployment.
 
-## Future Improvements
+## Roadmap
 
-- Add automated database provisioning and migration scripts
-- Add configurable environment variable support in the application
-- Add complete cross-platform installation instructions
-- Add a larger automated test suite and coverage reports
-- Add optional Docker container support
-- Add secure deployment and continuous integration tooling
+- Add automated database provisioning and schema migration
+- Improve environment variable support across the application
+- Expand automated tests and coverage
+- Add optional Docker support for local deployment
+- Add configuration-driven role and policy management
+
+## Credits
+
+- Original implementation by the repository maintainer
+- Security concepts inspired by RBAC, MLS, inference control, and secure database design
 
 ## License
 

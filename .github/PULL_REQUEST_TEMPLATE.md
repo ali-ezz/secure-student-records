@@ -1,21 +1,22 @@
 ---
 name: Pull request
-about: Describe the changes made in this pull request
+about: Describe the changes included in this pull request
 ---
 
 ## Summary
 
-A brief description of the change.
+A concise summary of the change.
 
-## Changes
+## What changed
 
+- 
 - 
 - 
 
 ## Testing
 
-How was this change tested?
+Describe how this change was tested and any commands used.
 
 ## Notes
 
-Any additional context or questions.
+Any additional context, edge cases, or follow-up actions.
